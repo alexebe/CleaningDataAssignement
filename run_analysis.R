@@ -69,5 +69,5 @@ f<-function(){
   
   }
   
-   data_Mean                     
+   write.table(data_Mean,"data_Mean.txt",row.names=FALSE)                     
 }
