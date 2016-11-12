@@ -69,5 +69,5 @@ f<-function(){
   
   }
   
-                        
+   data_Mean                     
 }
