@@ -22,7 +22,7 @@ for each subject and each activity, the subset from the original data set
   <li>for each column the mean of the subset (for this column) is calculated and put into the same colum in the second data set.</li>
   </ul>
  
- <br/><br/>
+ <br/>
  </h3>
  <h4>
 The final data set has the following variables:
