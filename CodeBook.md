@@ -17,9 +17,9 @@
 for each subject and each activity, the subset from the original data set
   which has the same subject and activity. A new row is added to the new data set with the following values:<br/>
   <ul>
-  <li>*the current subject is copied into the subject column</li>
-  <li>*the current activity is copied into the activity column</li>
-  <li>*for each column the mean of the subset (for this column) is calculated and put into the same colum in the second data set.</li>
+  <li>the current subject is copied into the subject column</li>
+  <li>the current activity is copied into the activity column</li>
+  <li>for each column the mean of the subset (for this column) is calculated and put into the same colum in the second data set.</li>
   </ul>
  
  <br/><br/>
