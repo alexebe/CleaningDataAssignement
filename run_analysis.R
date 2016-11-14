@@ -25,17 +25,19 @@ f<-function(){
   #Extract only the measurements on the mean and standard deviation for each measurement.
   data<-data[,grepl("mean|std",names(data))]
   
-  #Add subject variable to data set
-  s<-rbind(subject_test,subject_train)
-  subject<-data.frame(subject=s$V1)
-  names(subject)<-c("subject")
-  data<-cbind(data,subject)
-  
   #Add activity variable to data set
   a<-rbind(label_test,label_train)
   activity<-data.frame(activity=a$V1)
   names(activity)<-c("activity")
-  data<-cbind(data,activity)
+  data<-cbind(activity,data)
+  
+  #Add subject variable to data set
+  s<-rbind(subject_test,subject_train)
+  subject<-data.frame(subject=s$V1)
+  names(subject)<-c("subject")
+  data<-cbind(subject,data)
+  
+  
   
   #Use descriptive activity names to name the activities in the data set
   for(i in 1:nrow(data)){
@@ -56,18 +58,18 @@ f<-function(){
   data_Mean<-data.frame(data_Mean)
   data<-tbl_df(data)
   n<-nrow(data_Mean)
-  m<-col_length-2
+ # m<-col_length-2
   for(s in subject){
     for(a in activities){
       d<- data %>% filter(activity==a,subject==s)
       
       data_Mean[n,"subject"]<-s
       data_Mean[n,"activity"]<-a
-      data_Mean[n,1:m]<-colMeans(d[,1:m])
+      data_Mean[n,3:col_length]<-colMeans(d[,3:col_length])
       n<-n+1
     }
   
   }
   
-   write.table(data_Mean,"data_Mean.txt",row.names=FALSE)                     
+  write.table(data_Mean,"data_Mean.txt",row.names=FALSE,quote = FALSE)                       
 }
