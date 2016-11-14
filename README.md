@@ -1,6 +1,7 @@
 # CleaningDataAssignement
-My Cleaning and Data final project
+My Cleaning and Data final project. 
 
-This project contains 2 file:
+This project contains 3 files:
 -run_analysis.R
 -CodeBook.md
+-Readme.md
